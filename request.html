@@ -9,11 +9,6 @@
 
 <title>Request Game - Miyu Repacks</title>
 
-<meta
-    name="description"
-    content="Request game kepada Miyu Repacks."
->
-
 <link
     href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap"
     rel="stylesheet"
@@ -26,12 +21,11 @@
 
 <body>
 
-
 <div class="container">
 
 
     <div class="logo">
-        MIYU REPacks
+        MIYU REPACKS
     </div>
 
 
@@ -42,17 +36,13 @@
 
     <div class="request-box">
 
-
         <div class="request-title">
             REQUEST GAME
         </div>
 
 
         <div class="request-description">
-
-            Punya game yang ingin ditambahkan ke Miyu Repacks?
-            Isi data di bawah dengan benar.
-
+            Request game yang ingin ditambahkan ke Miyu Repacks.
         </div>
 
 
@@ -68,8 +58,8 @@
                 <input
                     type="text"
                     id="name"
-                    name="name"
                     placeholder="Masukkan nama..."
+                    maxlength="50"
                     required
                 >
 
@@ -85,8 +75,8 @@
                 <input
                     type="text"
                     id="username"
-                    name="username"
                     placeholder="Masukkan username..."
+                    maxlength="30"
                     required
                 >
 
@@ -102,8 +92,8 @@
                 <input
                     type="text"
                     id="game"
-                    name="game"
                     placeholder="Contoh: GTA IV"
+                    maxlength="100"
                     required
                 >
 
@@ -116,13 +106,29 @@
                     PLATFORM
                 </label>
 
-                <input
-                    type="text"
-                    id="platform"
-                    name="platform"
-                    placeholder="PC / Android / PS2"
-                    required
-                >
+                <select id="platform" required>
+
+                    <option value="">
+                        Pilih Platform
+                    </option>
+
+                    <option value="PC">
+                        PC
+                    </option>
+
+                    <option value="Android">
+                        Android
+                    </option>
+
+                    <option value="PS2">
+                        PS2
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
 
             </div>
 
@@ -135,8 +141,8 @@
 
                 <textarea
                     id="reason"
-                    name="reason"
                     placeholder="Kenapa game ini ingin ditambahkan?"
+                    maxlength="500"
                 ></textarea>
 
             </div>
@@ -152,7 +158,6 @@
 
         </form>
 
-
     </div>
 
 
@@ -160,8 +165,16 @@
         id="successMessage"
         class="success"
     >
-        REQUEST BERHASIL DIKIRIM
+        REQUEST BERHASIL DISIMPAN
     </div>
+
+
+    <a
+        href="requests.html"
+        class="back-button"
+    >
+        LIHAT REQUEST GAME →
+    </a>
 
 
     <a
@@ -180,27 +193,7 @@
 </div>
 
 
-<script>
-
-const form =
-    document.getElementById("requestForm");
-
-const successMessage =
-    document.getElementById("successMessage");
-
-
-form.addEventListener("submit", function(event){
-
-    event.preventDefault();
-
-    successMessage.classList.add("show");
-
-    form.reset();
-
-});
-
-</script>
-
+<script src="request.js"></script>
 
 </body>
 
