@@ -5,21 +5,33 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-<title>Request Game - Miyu Repacks</title>
+<title>Miyu Game Request</title>
 
 <meta
-name="description"
-content="Request game untuk Miyu Repacks."
+    name="description"
+    content="Miyu Game Request - Request game yang ingin ditambahkan ke Miyu Repacks."
 >
 
 <link
-href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap"
-rel="stylesheet"
+    rel="icon"
+    type="image/png"
+    href="logo.jpg"
 >
 
-<link rel="stylesheet" href="style.css">
+<link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap"
+    rel="stylesheet"
+>
+
+<link
+    rel="stylesheet"
+    href="style.css"
+>
 
 </head>
 
@@ -29,103 +41,158 @@ rel="stylesheet"
 
 <header>
 
-    <div class="logo">
+    <div class="header-logo">
         MIYU REPACKS
+    </div>
+
+    <div class="header-subtitle">
+        GAME REQUEST SYSTEM
     </div>
 
 </header>
 
 
-
 <main class="container">
 
 
-    <!-- BACK -->
+    <!-- =========================
+         TITLE
+    ========================== -->
 
-    <a
-        href="https://krekkk.github.io/Miyu-Repacks/"
-        class="back"
-    >
-        ← KEMBALI KE MIYU REPACKS
-    </a>
-
-
-
-    <!-- TITLE -->
-
-    <section class="title-section">
+    <section class="hero">
 
         <h1>
             REQUEST GAME
         </h1>
 
         <p>
-            Request game yang ingin ditambahkan ke Miyu Repacks.
+            Request game yang ingin ditambahkan
+            ke Miyu Repacks.
         </p>
 
     </section>
 
 
-
-    <!-- REQUEST FORM -->
+    <!-- =========================
+         FORM
+    ========================== -->
 
     <section class="request-box">
+
+
+        <div class="section-title">
+            KIRIM REQUEST
+        </div>
 
 
         <form id="requestForm">
 
 
-            <label for="game">
-                NAMA GAME
-            </label>
+            <div class="form-group">
+
+                <label for="name">
+                    NAMA
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    maxlength="50"
+                    placeholder="Masukkan nama..."
+                    required
+                >
+
+            </div>
 
 
-            <input
-                type="text"
-                id="game"
-                name="game"
-                placeholder="Masukkan nama game..."
-                maxlength="100"
-                required
-            >
+            <div class="form-group">
+
+                <label for="username">
+                    USERNAME
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    maxlength="30"
+                    placeholder="Masukkan username..."
+                    required
+                >
+
+            </div>
 
 
+            <div class="form-group">
 
-            <label for="username">
-                USERNAME
-            </label>
+                <label for="game">
+                    NAMA GAME
+                </label>
 
+                <input
+                    type="text"
+                    id="game"
+                    maxlength="100"
+                    placeholder="Contoh: GTA IV"
+                    required
+                >
 
-            <input
-                type="text"
-                id="username"
-                name="username"
-                placeholder="Masukkan username..."
-                maxlength="50"
-                required
-            >
-
-
-
-            <label for="name">
-                NAMA
-            </label>
+            </div>
 
 
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Masukkan nama..."
-                maxlength="50"
-                required
-            >
+            <div class="form-group">
 
+                <label for="platform">
+                    PLATFORM
+                </label>
+
+                <select
+                    id="platform"
+                    required
+                >
+
+                    <option value="">
+                        PILIH PLATFORM
+                    </option>
+
+                    <option value="PC">
+                        PC
+                    </option>
+
+                    <option value="Android">
+                        Android
+                    </option>
+
+                    <option value="PS2">
+                        PS2
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="reason">
+                    ALASAN REQUEST
+                </label>
+
+                <textarea
+                    id="reason"
+                    maxlength="500"
+                    placeholder="Kenapa game ini ingin ditambahkan?"
+                ></textarea>
+
+            </div>
 
 
             <button
                 type="submit"
-                id="submitButton"
+                class="submit-button"
             >
                 KIRIM REQUEST
             </button>
@@ -134,40 +201,29 @@ rel="stylesheet"
         </form>
 
 
-
-        <!-- MESSAGE -->
-
         <div
-            id="message"
-            class="message"
-        ></div>
+            id="successMessage"
+            class="success-message"
+        >
+            REQUEST BERHASIL DISIMPAN
+        </div>
 
 
     </section>
 
 
+    <!-- =========================
+         VIEW REQUEST
+    ========================== -->
 
-    <!-- REQUEST TERBARU -->
+    <section class="view-section">
 
-    <section class="request-list">
-
-
-        <div class="section-title">
-            REQUEST TERBARU
-        </div>
-
-
-
-        <div id="requestList">
-
-
-            <div class="loading">
-                MEMUAT REQUEST...
-            </div>
-
-
-        </div>
-
+        <a
+            href="requests.html"
+            class="view-button"
+        >
+            LIHAT REQUEST GAME →
+        </a>
 
     </section>
 
@@ -175,17 +231,14 @@ rel="stylesheet"
 </main>
 
 
-
 <footer>
 
-    MIYU REPACKS © 2026
+    Miyu Repacks © 2026
 
 </footer>
 
 
-
 <script src="request.js"></script>
-
 
 </body>
 
