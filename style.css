@@ -1,0 +1,582 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #111 0%,
+            #000 45%,
+            #000 100%
+        );
+
+    color:#fff;
+
+    font-family:'Oswald',sans-serif;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+    width:100%;
+
+    height:80px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 6%;
+
+    background:#050505;
+
+    border-bottom:1px solid #1e90ff;
+
+    box-shadow:
+        0 0 15px rgba(30,144,255,.3);
+}
+
+
+.logo{
+    color:#1e90ff;
+
+    font-size:28px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-shadow:
+        0 0 5px #1e90ff,
+        0 0 15px #1e90ff,
+        0 0 30px #1e90ff;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.container{
+    width:90%;
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:35px 0 100px;
+}
+
+
+/* =====================================================
+   BACK
+===================================================== */
+
+.back{
+    display:inline-block;
+
+    margin-bottom:35px;
+
+    color:#777;
+
+    text-decoration:none;
+
+    font-family:Arial,sans-serif;
+
+    font-size:14px;
+
+    transition:.2s;
+}
+
+
+.back:hover{
+    color:#1e90ff;
+
+    text-shadow:
+        0 0 8px #1e90ff;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.title-section{
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+
+.title-section h1{
+    font-size:60px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    color:#1e90ff;
+
+    text-shadow:
+        0 0 5px #1e90ff,
+        0 0 15px #1e90ff,
+        0 0 30px #1e90ff,
+        0 0 50px rgba(30,144,255,.5);
+}
+
+
+.title-section p{
+    margin-top:10px;
+
+    color:#777;
+
+    font-family:Arial,sans-serif;
+
+    font-size:15px;
+}
+
+
+/* =====================================================
+   REQUEST BOX
+===================================================== */
+
+.request-box{
+    width:100%;
+
+    padding:30px;
+
+    background:#030303;
+
+    border:1px solid #1e90ff;
+
+    box-shadow:
+        0 0 10px rgba(30,144,255,.4),
+        0 0 25px rgba(30,144,255,.15);
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+#requestForm{
+    display:flex;
+
+    flex-direction:column;
+}
+
+
+label{
+    margin-bottom:8px;
+
+    color:#1e90ff;
+
+    font-size:16px;
+
+    letter-spacing:1px;
+
+    text-shadow:
+        0 0 6px rgba(30,144,255,.5);
+}
+
+
+input{
+    width:100%;
+
+    padding:14px 15px;
+
+    margin-bottom:22px;
+
+    background:#000;
+
+    color:#00ffcc;
+
+    border:1px solid #333;
+
+    outline:none;
+
+    font-family:Consolas,monospace;
+
+    font-size:14px;
+
+    transition:.2s;
+}
+
+
+input::placeholder{
+    color:#555;
+}
+
+
+input:hover{
+    border-color:#555;
+}
+
+
+input:focus{
+    border-color:#1e90ff;
+
+    box-shadow:
+        0 0 8px rgba(30,144,255,.5),
+        0 0 18px rgba(30,144,255,.15);
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+button{
+    width:100%;
+
+    padding:15px;
+
+    background:transparent;
+
+    color:#1e90ff;
+
+    border:2px solid #1e90ff;
+
+    cursor:pointer;
+
+    font-family:'Oswald',sans-serif;
+
+    font-size:17px;
+
+    letter-spacing:1px;
+
+    transition:.25s;
+}
+
+
+button:hover{
+    background:#1e90ff;
+
+    color:#000;
+
+    box-shadow:
+        0 0 15px #1e90ff,
+        0 0 30px rgba(30,144,255,.5);
+}
+
+
+button:active{
+    transform:scale(.98);
+}
+
+
+button:disabled{
+    opacity:.5;
+
+    cursor:not-allowed;
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.message{
+    display:none;
+
+    margin-top:20px;
+
+    padding:15px;
+
+    text-align:center;
+
+    font-family:Consolas,monospace;
+
+    font-size:14px;
+}
+
+
+.message.success{
+    display:block;
+
+    color:#00ffcc;
+
+    border:1px solid #00ffcc;
+
+    box-shadow:
+        0 0 10px rgba(0,255,204,.3);
+}
+
+
+.message.error{
+    display:block;
+
+    color:#ff4444;
+
+    border:1px solid #ff4444;
+
+    box-shadow:
+        0 0 10px rgba(255,68,68,.3);
+}
+
+
+/* =====================================================
+   REQUEST LIST
+===================================================== */
+
+.request-list{
+    width:100%;
+
+    margin-top:70px;
+}
+
+
+.section-title{
+    margin-bottom:20px;
+
+    padding-bottom:12px;
+
+    color:#1e90ff;
+
+    font-size:32px;
+
+    border-bottom:1px solid #1e90ff;
+
+    text-shadow:
+        0 0 8px #1e90ff;
+}
+
+
+/* =====================================================
+   REQUEST ITEM
+===================================================== */
+
+.request-item{
+    width:100%;
+
+    padding:20px;
+
+    margin-bottom:15px;
+
+    background:#030303;
+
+    border:1px solid #222;
+
+    transition:.25s;
+}
+
+
+.request-item:hover{
+    border-color:#1e90ff;
+
+    transform:translateX(5px);
+
+    box-shadow:
+        0 0 12px rgba(30,144,255,.25);
+}
+
+
+.request-game{
+    margin-bottom:10px;
+
+    color:#1e90ff;
+
+    font-size:24px;
+
+    text-shadow:
+        0 0 8px #1e90ff;
+}
+
+
+.request-info{
+    margin-top:5px;
+
+    color:#777;
+
+    font-family:Arial,sans-serif;
+
+    font-size:13px;
+}
+
+
+.request-status{
+    display:inline-block;
+
+    margin-top:12px;
+
+    padding:5px 10px;
+
+    color:#ffcc00;
+
+    border:1px solid #ffcc00;
+
+    font-family:Consolas,monospace;
+
+    font-size:12px;
+
+    text-shadow:
+        0 0 5px rgba(255,204,0,.4);
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.loading{
+    width:100%;
+
+    padding:30px;
+
+    text-align:center;
+
+    color:#555;
+
+    font-family:Consolas,monospace;
+
+    border:1px solid #222;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    padding:35px;
+
+    text-align:center;
+
+    color:#444;
+
+    font-family:Arial,sans-serif;
+
+    font-size:12px;
+
+    border-top:1px solid #111;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:760px){
+
+    header{
+        height:70px;
+
+        padding:0 5%;
+    }
+
+
+    .logo{
+        font-size:23px;
+    }
+
+
+    .container{
+        width:92%;
+
+        padding-top:25px;
+    }
+
+
+    .title-section h1{
+        font-size:45px;
+    }
+
+
+    .request-box{
+        padding:22px;
+    }
+
+
+    .section-title{
+        font-size:27px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:500px){
+
+    header{
+        height:65px;
+    }
+
+
+    .logo{
+        font-size:20px;
+
+        letter-spacing:1px;
+    }
+
+
+    .container{
+        width:92%;
+    }
+
+
+    .title-section{
+        margin-bottom:30px;
+    }
+
+
+    .title-section h1{
+        font-size:34px;
+
+        letter-spacing:2px;
+    }
+
+
+    .title-section p{
+        font-size:13px;
+
+        line-height:1.6;
+    }
+
+
+    .request-box{
+        padding:18px;
+    }
+
+
+    input{
+        padding:13px;
+    }
+
+
+    button{
+        padding:14px;
+
+        font-size:15px;
+    }
+
+
+    .section-title{
+        font-size:24px;
+    }
+
+
+    .request-game{
+        font-size:21px;
+    }
+
+
+    .request-item{
+        padding:16px;
+    }
+
+}
