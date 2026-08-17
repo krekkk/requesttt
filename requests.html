@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Game Requests - Miyu Repacks</title>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap"
+    rel="stylesheet"
+>
+
+<link
+    rel="stylesheet"
+    href="style.css"
+>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="header-logo">
+        MIYU REPACKS
+    </div>
+
+    <div class="header-subtitle">
+        GAME REQUEST LIST
+    </div>
+
+</header>
+
+
+<main class="container">
+
+
+    <section class="hero">
+
+        <h1>
+            REQUEST GAME
+        </h1>
+
+        <p>
+            Daftar game yang pernah di-request.
+        </p>
+
+    </section>
+
+
+    <section class="request-list">
+
+        <div
+            id="requestContainer"
+        ></div>
+
+    </section>
+
+
+    <div class="view-section">
+
+        <a
+            href="index.html"
+            class="view-button"
+        >
+            + REQUEST GAME
+        </a>
+
+    </div>
+
+
+</main>
+
+
+<footer>
+
+    Miyu Repacks © 2026
+
+</footer>
+
+
+<script>
+
+const STORAGE_KEY =
+    "miyu_game_requests";
+
+
+function getRequests(){
+
+    const saved =
+        localStorage.getItem(
+            STORAGE_KEY
+        );
+
+
+    if(!saved){
+
+        return [];
+
+    }
+
+
+    try{
+
+        return JSON.parse(saved);
+
+    }catch(error){
+
+        return [];
+
+    }
+
+}
+
+
+function escapeHTML(text){
+
+    const element =
+        document.createElement("div");
+
+    element.textContent =
+        text ?? "";
+
+    return element.innerHTML;
+
+}
+
+
+function displayRequests(){
+
+    const container =
+        document.getElementById(
+            "requestContainer"
+        );
+
+
+    const requests =
+        getRequests();
+
+
+    if(requests.length === 0){
+
+        container.innerHTML = `
+
+            <div class="empty-request">
+
+                BELUM ADA REQUEST GAME
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    container.innerHTML = "";
+
+
+    requests.forEach(
+        function(request){
+
+            const item =
+                document.createElement(
+                    "div"
+                );
+
+
+            item.className =
+                "request-item";
+
+
+            item.innerHTML = `
+
+                <div class="request-game">
+
+                    ${escapeHTML(
+                        request.game
+                    )}
+
+                </div>
+
+
+                <div class="request-info">
+
+                    Nama:
+                    ${escapeHTML(
+                        request.name
+                    )}
+
+                    <br>
+
+                    Username:
+                    ${escapeHTML(
+                        request.username
+                    )}
+
+                    <br>
+
+                    Platform:
+                    ${escapeHTML(
+                        request.platform
+                    )}
+
+                    <br>
+
+                    Status:
+                    ${escapeHTML(
+                        request.status
+                    )}
+
+                </div>
+
+
+                ${
+                    request.reason
+                    ?
+                    `
+                    <div class="request-reason">
+
+                        ${escapeHTML(
+                            request.reason
+                        )}
+
+                    </div>
+                    `
+                    :
+                    ""
+                }
+
+
+                <div class="request-date">
+
+                    ${escapeHTML(
+                        request.date
+                    )}
+
+                </div>
+
+            `;
+
+
+            container.appendChild(item);
+
+        }
+    );
+
+}
+
+
+displayRequests();
+
+</script>
+
+
+</body>
+
+</html>
