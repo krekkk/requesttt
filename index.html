@@ -11,18 +11,21 @@
 
 <meta
 name="description"
-content="Request game di Miyu Repacks."
+content="Request game untuk Miyu Repacks."
 >
 
 <link
 href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap"
-rel="stylesheet">
+rel="stylesheet"
+>
 
-<link rel="stylesheet" href="request.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -33,12 +36,22 @@ rel="stylesheet">
 </header>
 
 
+
 <main class="container">
 
-    <a href="index.html" class="back">
-        ← KEMBALI
+
+    <!-- BACK -->
+
+    <a
+        href="https://krekkk.github.io/Miyu-Repacks/"
+        class="back"
+    >
+        ← KEMBALI KE MIYU REPACKS
     </a>
 
+
+
+    <!-- TITLE -->
 
     <section class="title-section">
 
@@ -53,50 +66,61 @@ rel="stylesheet">
     </section>
 
 
+
+    <!-- REQUEST FORM -->
+
     <section class="request-box">
 
+
         <form id="requestForm">
+
 
             <label for="game">
                 NAMA GAME
             </label>
 
+
             <input
                 type="text"
                 id="game"
                 name="game"
-                placeholder="Contoh: GTA IV"
+                placeholder="Masukkan nama game..."
                 maxlength="100"
                 required
             >
+
 
 
             <label for="username">
                 USERNAME
             </label>
 
+
             <input
                 type="text"
                 id="username"
                 name="username"
-                placeholder="Username kamu"
+                placeholder="Masukkan username..."
                 maxlength="50"
                 required
             >
+
 
 
             <label for="name">
                 NAMA
             </label>
 
+
             <input
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Nama kamu"
+                placeholder="Masukkan nama..."
                 maxlength="50"
                 required
             >
+
 
 
             <button
@@ -106,30 +130,44 @@ rel="stylesheet">
                 KIRIM REQUEST
             </button>
 
+
         </form>
 
+
+
+        <!-- MESSAGE -->
 
         <div
             id="message"
             class="message"
         ></div>
 
+
     </section>
 
 
+
+    <!-- REQUEST TERBARU -->
+
     <section class="request-list">
+
 
         <div class="section-title">
             REQUEST TERBARU
         </div>
 
+
+
         <div id="requestList">
+
 
             <div class="loading">
                 MEMUAT REQUEST...
             </div>
 
+
         </div>
+
 
     </section>
 
@@ -137,14 +175,17 @@ rel="stylesheet">
 </main>
 
 
+
 <footer>
 
-    MIYU REPACKS 2026
+    MIYU REPACKS © 2026
 
 </footer>
 
 
+
 <script src="request.js"></script>
+
 
 </body>
 
