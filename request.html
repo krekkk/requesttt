@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Request Game - Miyu Repacks</title>
+
+<meta
+name="description"
+content="Request game di Miyu Repacks."
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet" href="request.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        MIYU REPACKS
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <a href="index.html" class="back">
+        ← KEMBALI
+    </a>
+
+
+    <section class="title-section">
+
+        <h1>
+            REQUEST GAME
+        </h1>
+
+        <p>
+            Request game yang ingin ditambahkan ke Miyu Repacks.
+        </p>
+
+    </section>
+
+
+    <section class="request-box">
+
+        <form id="requestForm">
+
+            <label for="game">
+                NAMA GAME
+            </label>
+
+            <input
+                type="text"
+                id="game"
+                name="game"
+                placeholder="Contoh: GTA IV"
+                maxlength="100"
+                required
+            >
+
+
+            <label for="username">
+                USERNAME
+            </label>
+
+            <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Username kamu"
+                maxlength="50"
+                required
+            >
+
+
+            <label for="name">
+                NAMA
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Nama kamu"
+                maxlength="50"
+                required
+            >
+
+
+            <button
+                type="submit"
+                id="submitButton"
+            >
+                KIRIM REQUEST
+            </button>
+
+        </form>
+
+
+        <div
+            id="message"
+            class="message"
+        ></div>
+
+    </section>
+
+
+    <section class="request-list">
+
+        <div class="section-title">
+            REQUEST TERBARU
+        </div>
+
+        <div id="requestList">
+
+            <div class="loading">
+                MEMUAT REQUEST...
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    MIYU REPACKS 2026
+
+</footer>
+
+
+<script src="request.js"></script>
+
+</body>
+
+</html>
